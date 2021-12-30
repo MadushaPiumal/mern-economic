@@ -3,23 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { listCentres } from "../actions/centreActions";
 import { listItems } from "../actions/itemActions";
 import { 
-  listPrice,
-  getPriceDetails,
-  priceRegister,
-  deletePrice,
+  listPrice, 
+  priceRegister,  
 } from "../actions/priceAction";
 import { Row, Col, Button, Form, Table } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
 
 const PriceScreen = () => {
   const [centreName, setCentreName] = useState("");
   const [itemName, setItemName] = useState("");
-  const [price, setPrice] = useState("");
-  const [date, setDate] = useState(new Date());
+  const [price, setPrice] = useState(""); 
   const [message, setMessage] = useState(null);
 
   var year = date.getUTCFullYear();
